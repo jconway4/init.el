@@ -83,6 +83,11 @@
   (setq helm-projectile-fuzzy-match t)
   :config
   (helm-projectile-on))
+;; Flycheck
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
 ;; Ansi-Term
 (eval-after-load "term"
   '(define-key term-raw-map (kbd "C-c y") 'term-paste))
@@ -164,6 +169,7 @@
 ;; Python
 (use-package elpy
   :ensure t
+  :config
   :init
   (elpy-enable))
 ;; Ruby
@@ -278,7 +284,7 @@
  '(dashboard-set-init-info nil)
  '(elpy-modules
    (quote
-    (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
+    (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 5) ((control)))))
  '(package-selected-packages
