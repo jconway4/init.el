@@ -67,6 +67,9 @@
   helm-echo-input-in-header-line t
   helm-autoresize-max-height 0
   helm-autoresize-min-height 20)
+  :bind
+  (("M-x" . helm-M-x)
+   ("C-c m f" . helm-find-files))
   :config
   (helm-mode 1))
 ;; Projectile
