@@ -295,6 +295,7 @@
  '(package-selected-packages
    (quote
     (csv-mode shell-pop dashboard which-key magit pdf-tools renpy irony dimmer company-mode helm-projectile enh-ruby-mode omnisharp csharp-mode vue-mode web-mode js2-mode elpy spaceline-config spaceline beacon exec-path-from-shell general doom-themes use-package)))
+ '(python-indent-offset 4)
  '(shell-pop-autocd-to-working-dir t)
  '(shell-pop-cleanup-buffer-at-process-exit t)
  '(shell-pop-restore-window-configuration t)
