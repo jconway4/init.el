@@ -78,7 +78,9 @@
   :config
   (projectile-mode 1))
 (use-package magit
-  :ensure t)
+  :ensure t
+  :bind
+  (("C-c m m" . magit)))
 ;; Helm-Projectile
 (use-package helm-projectile
   :ensure t
