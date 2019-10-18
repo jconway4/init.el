@@ -77,10 +77,6 @@
   :ensure t
   :config
   (projectile-mode 1))
-(use-package magit
-  :ensure t
-  :bind
-  (("C-c m m" . magit)))
 ;; Helm-Projectile
 (use-package helm-projectile
   :ensure t
@@ -88,14 +84,24 @@
   (setq helm-projectile-fuzzy-match t)
   :config
   (helm-projectile-on))
+;; Magit
+(use-package magit
+  :ensure t
+  :bind
+  (("C-c m m" . magit)))
+;; Which Key
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode 1))
+;; Ansi-Term
+(eval-after-load "term"
+  '(define-key term-raw-map (kbd "C-c y") 'term-paste))
 ;; Flycheck
 (use-package flycheck
   :ensure t
   :init
   (global-flycheck-mode t))
-;; Ansi-Term
-(eval-after-load "term"
-  '(define-key term-raw-map (kbd "C-c y") 'term-paste))
 ;; Company
 (use-package company
   :ensure t)
@@ -105,11 +111,6 @@
 ;; CSV-mode
 (use-package csv-mode
   :ensure t)
-;; Which Key
-(use-package which-key
-  :ensure t
-  :config
-  (which-key-mode 1))
 ;; Page Break Lines
 (use-package page-break-lines
   :ensure t)
@@ -258,7 +259,7 @@
    "C-c l"  '(helm-buffers-list :which-key "buffers list")
    ;; Windows
    "C-c f" '(windmove-right :which-key "move right")
-   "C-c b" '(windmove-left :which-key "move left") 
+   "C-c b" '(windmove-left :which-key "move left")
    "C-c p" '(windmove-up :which-key "move up")
    "C-c n" '(windmove-down :which-key "move down")
    "C-c k" '(delete-window :which-key "delete window")
